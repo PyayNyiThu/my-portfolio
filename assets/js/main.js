@@ -72,59 +72,77 @@ tabs.forEach(tab => {
     })
 })
 
-/*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectorAll('.services__button'),
-      modalCloses = document.querySelectorAll('.services__modal-close');
+/*==================== CONTACT FORM ====================*/
+const contactForm = document.getElementById('contact-form')
 
-let modal = function(modalClick) {
-    modalViews[modalClick].classList.add('active-modal')
+if (contactForm) {
+    const contactStatus = document.getElementById('contact-status')
+    const contactButton = contactForm.querySelector('button[type="submit"]')
+
+    const contactFailureText = (detail) => {
+        const text = String(detail || '').replace(/\s+/g, ' ').trim()
+        if (/activ/i.test(text)) {
+            return 'Check pyaynyithu@gmail.com and open the Activate Form email, then send again.'
+        }
+        if (/web server|html file|referer/i.test(text)) {
+            return 'Open this site from the local server or the published page, then send again.'
+        }
+        if (!text || text === 'send failed' || /failed to fetch|networkerror|load failed/i.test(text)) {
+            return 'The message could not be sent because this browser blocked the request. Use the email address above.'
+        }
+        return text.length > 180 ? `${text.slice(0, 177)}...` : text
+    }
+
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault()
+
+        const honey = contactForm.querySelector('.contact__honey')
+        if (honey && honey.value) return
+
+        const name = document.getElementById('contact-name').value.trim()
+        const email = document.getElementById('contact-email').value.trim()
+        const project = document.getElementById('contact-project').value.trim()
+        const message = document.getElementById('contact-message').value.trim()
+        const subject = project ? `Portfolio: ${project}` : 'Portfolio inquiry'
+
+        contactButton.disabled = true
+        contactStatus.className = 'contact__note'
+        contactStatus.textContent = 'Sending...'
+
+        try {
+            const response = await fetch('https://formsubmit.co/pyaynyithu@gmail.com', {
+                method: 'POST',
+                referrerPolicy: 'no-referrer',
+                body: new URLSearchParams({
+                    name,
+                    email,
+                    project: project || 'Not specified',
+                    message,
+                    _subject: subject,
+                    _replyto: email,
+                    _template: 'box',
+                    _captcha: 'false',
+                    _url: 'https://pyaynyithu.github.io/my-portfolio/',
+                }),
+            })
+            const raw = await response.text()
+            const paragraph = raw.match(/<p>([\s\S]*?)<\/p>/i)
+            const serviceMessage = (paragraph ? paragraph[1] : raw).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+            if (!response.ok || !/submitted successfully/i.test(serviceMessage)) {
+                throw new Error(serviceMessage || 'send failed')
+            }
+
+            contactForm.reset()
+            contactStatus.className = 'contact__note contact__note--success'
+            contactStatus.textContent = 'Message sent. I will reply to the email you entered.'
+        } catch (error) {
+            contactStatus.className = 'contact__note contact__note--error'
+            contactStatus.textContent = contactFailureText(error && error.message)
+        } finally {
+            contactButton.disabled = false
+        }
+    })
 }
-
-modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () => {
-        modal(i)
-    })
-})
-
-modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener('click', () => {
-        modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
-
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiperPortfolio = new Swiper(".portfolio__container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
-/*==================== TESTIMONIAL ====================*/
-let swiperTestimonial = new Swiper(".testimonial__container", {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 48,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    breakpoints: {
-        568: {
-            slidesPerView: 2,
-        },
-    },
-  });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
@@ -191,3 +209,198 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== HEADLINE TYPEWRITER ====================*/
+function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+async function typeHeadlines() {
+    const lines = [...document.querySelectorAll('.home__data .type-live')]
+    if (lines.length < 2) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const name = lines[0].textContent
+    const roles = [
+        'Full Stack Software Engineer',
+        'Laravel Developer',
+        'Vue.js Developer',
+    ]
+
+    const nameNode = document.createTextNode('')
+    lines[0].textContent = ''
+    lines[0].append(nameNode)
+    for (const char of name) {
+        nameNode.data += char
+        await wait(48)
+    }
+
+    const roleNode = document.createTextNode('')
+    const caret = document.createElement('span')
+    caret.className = 'type-cursor'
+    caret.setAttribute('aria-hidden', 'true')
+    lines[1].textContent = ''
+    lines[1].append(roleNode, caret)
+    await wait(350)
+
+    let index = 0
+    while (true) {
+        const role = roles[index % roles.length]
+        for (const char of role) {
+            roleNode.data += char
+            await wait(28)
+        }
+        await wait(1800)
+        while (roleNode.data.length) {
+            roleNode.data = roleNode.data.slice(0, -1)
+            await wait(18)
+        }
+        await wait(280)
+        index += 1
+    }
+}
+
+typeHeadlines()
+
+/*==================== PROJECT GALLERY ====================*/
+const projectGalleries = {
+    ziwa: {
+        title: 'Ziwa Thukha Healthcare',
+        slides: [
+            { src: 'assets/img/projects/ziwathukha-1.png', caption: 'Billing dashboard.' },
+            { src: 'assets/img/projects/ziwathukha-2.png', caption: 'Staff roles.' },
+            { src: 'assets/img/projects/ziwathukha-3.png', caption: 'Doctor timeslots.' },
+            { src: 'assets/img/projects/ziwathukha-4.png', caption: 'Marketing setup.' },
+            { src: 'assets/img/projects/ziwathukha-5.png', caption: 'Digital logbook.' },
+        ],
+    },
+    heal: {
+        title: 'Heal by Pun Hlaing',
+        slides: [
+            { src: 'assets/img/projects/heal-1.webp', caption: 'Home. On-demand care, records, and doctor chat.' },
+            { src: 'assets/img/projects/heal-2.webp', caption: 'Find doctors, online and in person.' },
+            { src: 'assets/img/projects/heal-3.webp', caption: 'Patient profile.' },
+            { src: 'assets/img/projects/heal-4.webp', caption: 'On-demand appointment.' },
+            { src: 'assets/img/projects/heal-5.webp', caption: 'Settings.' },
+        ],
+    },
+    'star-city': {
+        title: 'Star City Living',
+        slides: [
+            { src: 'assets/img/projects/star-city-1.png', caption: 'Active residents.' },
+            { src: 'assets/img/projects/star-city-2.png', caption: 'Maintenance case.' },
+            { src: 'assets/img/projects/star-city-4.png', caption: 'Subscriptions.' },
+            { src: 'assets/img/projects/star-city-5.webp', caption: 'Star Assist requests.' },
+            { src: 'assets/img/projects/star-city-6.webp', caption: 'Resident app home.' },
+            { src: 'assets/img/projects/star-city-7.webp', caption: 'Bill payment.' },
+        ],
+    },
+    governors: {
+        title: "Governor's Club Yangon",
+        slides: [
+            { src: 'assets/img/projects/governors-1.jpg', caption: 'Customer portal. Placeholder until your screenshot is added.' },
+            { src: 'assets/img/projects/governors-2.jpg', caption: 'Club offerings. Placeholder until your screenshot is added.' },
+            { src: 'assets/img/projects/governors-3.jpg', caption: 'Admin dashboard. Placeholder until your screenshot is added.' },
+        ],
+    },
+    'quiet-place': {
+        title: 'Quiet Place',
+        slides: [
+            { src: 'assets/img/qp.png', caption: 'Room search for meeting rooms and classrooms.' },
+        ],
+    },
+}
+
+const projectGallery = document.getElementById('project-gallery')
+
+if (projectGallery) {
+    const galleryDialog = projectGallery.querySelector('.gallery__dialog')
+    const galleryTitle = document.getElementById('gallery-title')
+    const galleryCaption = document.getElementById('gallery-caption')
+    const galleryImage = document.getElementById('gallery-image')
+    const galleryDots = document.getElementById('gallery-dots')
+    let galleryKey = null
+    let galleryIndex = 0
+    let galleryOpener = null
+
+    const galleryButtons = () => [...galleryDialog.querySelectorAll('button')]
+
+    const renderGallery = () => {
+        const project = projectGalleries[galleryKey]
+        const slide = project.slides[galleryIndex]
+        galleryTitle.textContent = project.title
+        galleryCaption.textContent = slide.caption
+        galleryImage.src = slide.src
+        galleryImage.alt = slide.caption
+        galleryDots.querySelectorAll('.gallery__dot').forEach((dot, dotIndex) => {
+            const active = dotIndex === galleryIndex
+            dot.classList.toggle('gallery__dot--active', active)
+            if (active) dot.setAttribute('aria-current', 'true')
+            else dot.removeAttribute('aria-current')
+        })
+    }
+
+    const openGallery = (key, button) => {
+        galleryKey = key
+        galleryIndex = 0
+        galleryOpener = button
+        galleryDots.textContent = ''
+        projectGalleries[key].slides.forEach((slide, slideIndex) => {
+            const dot = document.createElement('button')
+            dot.type = 'button'
+            dot.className = 'gallery__dot'
+            dot.setAttribute('aria-label', `Show ${slide.caption}`)
+            dot.addEventListener('click', () => {
+                galleryIndex = slideIndex
+                renderGallery()
+            })
+            galleryDots.appendChild(dot)
+        })
+        renderGallery()
+        projectGallery.hidden = false
+        document.body.style.overflow = 'hidden'
+        projectGallery.querySelector('.gallery__close').focus()
+    }
+
+    const closeGallery = () => {
+        projectGallery.hidden = true
+        document.body.style.overflow = ''
+        galleryImage.removeAttribute('src')
+        if (galleryOpener) galleryOpener.focus()
+    }
+
+    const stepGallery = (delta) => {
+        const count = projectGalleries[galleryKey].slides.length
+        galleryIndex = (galleryIndex + delta + count) % count
+        renderGallery()
+    }
+
+    document.querySelectorAll('[data-gallery]').forEach((button) => {
+        button.addEventListener('click', () => openGallery(button.dataset.gallery, button))
+    })
+
+    projectGallery.querySelectorAll('[data-gallery-close]').forEach((control) => {
+        control.addEventListener('click', closeGallery)
+    })
+    projectGallery.querySelector('[data-gallery-prev]').addEventListener('click', () => stepGallery(-1))
+    projectGallery.querySelector('[data-gallery-next]').addEventListener('click', () => stepGallery(1))
+
+    document.addEventListener('keydown', (event) => {
+        if (projectGallery.hidden) return
+        if (event.key === 'Escape') closeGallery()
+        if (event.key === 'ArrowRight') stepGallery(1)
+        if (event.key === 'ArrowLeft') stepGallery(-1)
+        if (event.key !== 'Tab') return
+
+        const items = galleryButtons()
+        const first = items[0]
+        const last = items[items.length - 1]
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault()
+            last.focus()
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault()
+            first.focus()
+        }
+    })
+}

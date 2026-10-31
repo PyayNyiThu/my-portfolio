@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Pyay Nyi Thu, a Full Stack Software Engineer in Bangkok. Laravel and Vue, including hospital and pharmacy systems.">
+    <meta property="og:title" content="Pyay Nyi Thu | Full Stack Software Engineer">
+    <meta property="og:description" content="Portfolio of Pyay Nyi Thu, a Full Stack Software Engineer in Bangkok. Laravel and Vue, including hospital and pharmacy systems.">
+    <meta property="og:type" content="website">
 
     <!--==================== favi icon ====================-->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -11,15 +15,10 @@
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
-    
-
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=28">
 
-    <title>Pyay Nyi Thu</title>
+    <title>Pyay Nyi Thu | Full Stack Software Engineer</title>
 </head>
 
 <body>
@@ -87,7 +86,7 @@
             <div class="home__container container grid">
                 <div class="home__content grid">
                     <div class="home_social">
-                        <a href="https://facebook.com/pyaenyi.thu" target="_blank" class="home__social home__social-icon">
+                        <a href="https://www.facebook.com/pyaynyithu" target="_blank" class="home__social home__social-icon">
                             <i class="uil uil-facebook-f"></i>
                         </a>
 
@@ -95,8 +94,8 @@
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
 
-                        <a href="https://github.com/PyayNyiThu" target="_blank" class="home__social home__social-icon">
-                            <i class="uil uil-github-alt"></i>
+                        <a href="https://github.com/PyayNyiThu" target="_blank" rel="noopener" class="home__social home__social-icon" aria-label="GitHub">
+                            <i class="uil uil-github"></i>
                         </a>
                     </div>
 
@@ -121,12 +120,23 @@
                     </div>
 
                     <div class="home__data">
-                        <h1 class="home__title">Hi, I'm </h1><h1 id="typewriter"></h1>
-                        <!-- <h3 class="home__subtitle">Web Developer</h3> -->
-                        <p class="home__description">Mid level experience in IT Field.</p>
-                        <a href="#contact" class="button button--flex">
-                            Contace Me<i class="uil uil-message button__icon"></i>
-                        </a>
+                        <h1 class="home__title">
+                            <span class="type-ghost" aria-hidden="true">Hi, I'm Pyay Nyi Thu</span>
+                            <span class="type-live">Hi, I'm Pyay Nyi Thu</span>
+                        </h1>
+                        <h2 class="home__subtitle" aria-label="Full Stack Software Engineer">
+                            <span class="type-ghost" aria-hidden="true">Full Stack Software Engineer</span>
+                            <span class="type-live">Full Stack Software Engineer</span>
+                        </h2>
+                        <p class="home__description">I build and maintain Laravel and Vue applications for healthcare and large-scale estate management.</p>
+                        <div class="home__buttons">
+                            <a href="#portfolio" class="button button--flex">
+                                View work<i class="uil uil-scenery button__icon"></i>
+                            </a>
+                            <a href="#contact" class="button button--flex button--ghost">
+                                Contact Me<i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -143,37 +153,35 @@
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about">
             <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle">My Introduction</span>
+            <span class="section__subtitle">Full Stack Software Engineer</span>
 
             <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="" class="about__img">
+                <img src="assets/img/about.jpg" alt="Pyay Nyi Thu" class="about__img">
 
                 <div class="about__data">
-                    <p class="about__description"> I got a degree B.C.Sc from University of Computer Studies Dawei (UCSD),
-                         to stand as a web developer and want to get more experiences in professional IT field.
-                         </p>
+                    <p class="about__description">Full Stack Software Engineer with 6+ years of experience building and maintaining web applications with PHP, Laravel, Vue.js, and MySQL, including large-scale estate management systems and healthcare management systems for hospital administration, pharmacy, laboratory, and patient service workflows. Experienced in developing RESTful APIs, database-driven workflows, authentication, and responsive dashboards. Comfortable collaborating with cross-functional teams and taking ownership of features from requirements and database design through development and delivery, with a strong focus on code quality, maintainability, and reliable software.</p>
 
                     <div class="about__info">
                         <div>
-                            <span class="about__info-title">01+</span>
+                            <span class="about__info-title">06+</span>
                             <span class="about__info-name">Years <br> experience</span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">10+</span>
-                            <span class="about__info-name">Completed <br> project(Company and University)</span>
+                            <span class="about__info-title">Healthcare</span>
+                            <span class="about__info-name">Hospital, pharmacy, <br> and laboratory</span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">1</span>
-                            <span class="about__info-name">Company <br> worked</span>
+                            <span class="about__info-title">100k+</span>
+                            <span class="about__info-name">Residents on <br> Star City</span>
                         </div>
                     </div>
 
                     <div class="about__button">
-                        <span class="button button--flex">
+                        <a href="assets/cv/cv.pdf" class="button button--flex" target="_blank" rel="noopener">
                             Download CV<i class="uil uil-download-alt button__icon"></i>
-                        </sapn>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -182,208 +190,86 @@
         <!--==================== SKILLS ====================-->
         <section class="skills section" id="skills">
             <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle">My Technical Level</span>
+            <span class="section__subtitle">Backend, frontend, and practice</span>
 
             <div class="skills__container container grid">
                 <div>
-                    <!--==================== SKILLS 1 ====================-->
                     <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-brackets-curly skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Frontend</h1>
-                                <!-- <span class="skills__subtitle">More than 4 years</span> -->
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">HTML</h3>
-                                    <span class="skills__number">80%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__html"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">CSS</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__css"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">JavaScript</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__javascript"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">JQuery</h3>
-                                    <span class="skills__number">60%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__jquery"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Bootstrap</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__bootstrap"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Vue</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__vue"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== SKILLS 2 ====================-->
-                    <div class="skills__content skills__close">
                         <div class="skills__header">
                             <i class="uil uil-server-network skills__icon"></i>
 
                             <div>
                                 <h1 class="skills__title">Backend</h1>
-                                <!-- <span class="skills__subtitle">More than 2 years</span> -->
                             </div>
 
                             <i class="uil uil-angle-down skills__arrow"></i>
                         </div>
 
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">PHP</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
+                        <div class="skills__list">
+                            <h3 class="skills__name">PHP</h3>
+                            <h3 class="skills__name">Laravel</h3>
+                            <h3 class="skills__name">MySQL</h3>
+                            <h3 class="skills__name">Strapi</h3>
+                            <h3 class="skills__name">REST APIs</h3>
+                        </div>
+                    </div>
 
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__php"></span>
-                                </div>
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-users-alt skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Practice</h1>
                             </div>
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Laravel</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
 
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__laravel"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Java</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__java"></span>
-                                </div>
-                            </div>
-
+                        <div class="skills__list">
+                            <h3 class="skills__name">Git and code review</h3>
+                            <h3 class="skills__name">Database design</h3>
+                            <h3 class="skills__name">Working with PM, BA, UI/UX, and QA</h3>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <!--==================== SKILLS 3 ====================-->
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class="uil uil-swatchbook skills__icon"></i>
+                            <i class="uil uil-brackets-curly skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Designer</h1>
-                                <!-- <span class="skills__subtitle">More than 5 years</span> -->
+                                <h1 class="skills__title">Frontend</h1>
                             </div>
 
                             <i class="uil uil-angle-down skills__arrow"></i>
                         </div>
 
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Photoshop</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__photoshop"></span>
-                                </div>
-                            </div>
+                        <div class="skills__list">
+                            <h3 class="skills__name">Vue 3</h3>
+                            <h3 class="skills__name">HTML</h3>
+                            <h3 class="skills__name">CSS</h3>
+                            <h3 class="skills__name">JavaScript</h3>
+                            <h3 class="skills__name">Nuxt.js</h3>
+                            <h3 class="skills__name">PrimeVue</h3>
+                            <h3 class="skills__name">Tailwind CSS</h3>
                         </div>
                     </div>
 
-                    <!--==================== SKILLS 4 ====================-->
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class="uil uil-swatchbook skills__icon"></i>
+                            <i class="uil uil-comment-alt skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Database</h1>
-                                <!-- <span class="skills__subtitle">More than 5 years</span> -->
+                                <h1 class="skills__title">Languages</h1>
                             </div>
 
                             <i class="uil uil-angle-down skills__arrow"></i>
                         </div>
 
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">SQL</h3>
-                                    <span class="skills__number">65%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__sql"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Mongo</h3>
-                                    <span class="skills__number">50%</span>
-                                </div>
-
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__mongo"></span>
-                                </div>
-                            </div>
+                        <div class="skills__list">
+                            <h3 class="skills__name">Burmese (native)</h3>
+                            <h3 class="skills__name">English (intermediate)</h3>
                         </div>
                     </div>
                 </div>
@@ -394,7 +280,7 @@
         <!--==================== QUALIFICATION ====================-->
         <section class="qualification section" id="qualification">
             <h2 class="section__title">Resume</h2>
-            <span class="section__subtitle">My personal journey</span>
+            <span class="section__subtitle">Work, education, and certificates</span>
 
             <div class="qualification__container container">
                 <div class="qualification__tabs">
@@ -412,15 +298,13 @@
                 <div class="qualification__sections">
                     <!--==================== QUALIFICATION Content 1====================-->
                     <div class="qualification__content qualification__active" data-content id="education">
-                        <!--==================== QUALIFICATION 1====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Training & Development Program</h3>
-                                <span class="qualification__subtitle">Shwe Lamin Nagar Group of Companies</span>
-
+                                <h3 class="qualification__title">Bachelor of Computer Science (B.C.Sc)</h3>
+                                <span class="qualification__subtitle">University of Computer Studies, Dawei, Myanmar</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2017
+                                    2012 – 2017
                                 </div>
                             </div>
 
@@ -430,78 +314,55 @@
                             </div>
                         </div>
 
-                        <!--==================== QUALIFICATION 2====================-->
                         <div class="qualification__data">
                             <div></div>
 
                             <div>
                                 <span class="qualification__rounder"></span>
                                 <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title"> MCPA Quiz</h3>
-                                <span class="qualification__subtitle">Online Exam</span>
-
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2017
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--==================== QUALIFICATION 3====================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">B.C.Sc</h3>
-                                <span class="qualification__subtitle">University of Computer Studies Dawei</span>
-
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2018
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--==================== QUALIFICATION 4====================-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
                             </div>
 
                             <div>
                                 <h3 class="qualification__title">PHP Web Developer Bootcamp</h3>
                                 <span class="qualification__subtitle">Myanmar IT Consulting</span>
-
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
                                     2020
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">KodeKloud</h3>
+                                <span class="qualification__subtitle">100 Days of Cloud (AWS), 100 Days of Cloud (Azure), 100 Days of DevOps</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2026
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                            </div>
                         </div>
                     </div>
 
                     <!--==================== QUALIFICATION Content 2====================-->
                     <div class="qualification__content" data-content id="work">
-                        <!--==================== QUALIFICATION 1====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Internship Program</h3>
-                                <span class="qualification__subtitle">Shwe Lamin Nagar Group of Companies</span>
-
+                                <h3 class="qualification__title">Senior Software Engineer</h3>
+                                <span class="qualification__subtitle">Atlas Digi Myanmar Limited (Onenex)</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2017 (May - July)
+                                    2022 Sept – 2026 July
                                 </div>
+                                <ul class="qualification__points">
+                                    <li>Took features from business analysis and database design through Laravel, Vue 3, and MySQL delivery.</li>
+                                    <li>Built REST APIs for dashboards and mobile apps, and reviewed code with the team.</li>
+                                    <li>Worked with junior developers and client teams to resolve issues, and managed Git branches.</li>
+                                </ul>
                             </div>
 
                             <div>
@@ -510,7 +371,6 @@
                             </div>
                         </div>
 
-                        <!--==================== QUALIFICATION 2====================-->
                         <div class="qualification__data">
                             <div></div>
 
@@ -520,51 +380,35 @@
                             </div>
 
                             <div>
-                                <h3 class="qualification__title">Electrical Project Manager</h3>
-                                <span class="qualification__subtitle">MTY Engineering Co.,Ltd </span>
-
+                                <h3 class="qualification__title">Software Engineer</h3>
+                                <span class="qualification__subtitle">rgo47</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2017 Dec - 2018 June 
+                                    2020 June – 2021 Jan
                                 </div>
+                                <ul class="qualification__points">
+                                    <li>Integrated REST APIs for an ERP system.</li>
+                                    <li>Worked with PM, BA, UI/UX, developers, and QA.</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!--==================== QUALIFICATION 3====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Operation Manager & Supervisor</h3>
-                                <span class="qualification__subtitle">Hotel Best House Dawei</span>
-
+                                <h3 class="qualification__title">Junior Software Engineer</h3>
+                                <span class="qualification__subtitle">rgo47</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2018 June - 2019 Oct
+                                    2020 Feb – 2020 May
                                 </div>
+                                <ul class="qualification__points">
+                                    <li>Built features for an ERP management system.</li>
+                                    <li>Collaborated with a senior developer.</li>
+                                </ul>
                             </div>
 
                             <div>
                                 <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--==================== QUALIFICATION 4====================-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Web Developer</h3>
-                                <span class="qualification__subtitle">rgo 47 </span>
-
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2020 Feb - 2021 Jan 
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -572,367 +416,248 @@
             </div>
         </section>
 
-        <!--==================== SERVICES ====================-->
-        <!-- <section class="services section">
-            <h2 class="section__title">Services</h2>
-            <span class="section__subtitle">What i offer</span>
-
-            <div class="services__container container grid"> -->
-                <!--==================== SERVICES 1====================-->
-                <!-- <div class="services__content">
-                    <div>
-                        <i class="uil uil-web-grid services__icon"></i>
-                        <h3 class="services__title">Ui/Ux <br> Designer</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-circle-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__modal-title">Ui/Ux <br> Designer</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I develop the user interface.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Web page development.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I create ux element interactions.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I position your company brand.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div> -->
-
-                <!--==================== SERVICES 2====================-->
-                <!-- <div class="services__content">
-                    <div>
-                        <i class="uil uil-arrow services__icon"></i>
-                        <h3 class="services__title">Frontend <br> Developer</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-circle-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__modal-title">Frontend <br> Developer</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I develop the user interface.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Web page development.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I create ux element interactions.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I position your company brand.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!--==================== SERVICES 3====================-->
-                <!-- <div class="services__content">
-                    <div>
-                        <i class="uil uil-pen services__icon"></i>
-                        <h3 class="services__title">Branding <br> Designer</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-circle-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__modal-title">Branding <br> Designer</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I develop the user interface.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Web page development.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I create ux element interactions.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>I position your company brand.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section> -->
-
         <!--==================== PORTFOLIO ====================-->
         <section class="portfolio section" id="portfolio">
             <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Most recent work</span>
+            <span class="section__subtitle">Selected projects</span>
+            <p class="portfolio__lead">The live dashboards need a login, so the product screens open here.</p>
 
-            <div class="portfolio__container container swiper">
-                <div class="swiper-wrapper">
+            <div class="portfolio__container container">
+                <div class="portfolio__grid grid">
+                    <article class="portfolio__card">
+                        <button type="button" class="portfolio__banner" data-gallery="ziwa" aria-label="View Ziwa Thukha screens">
+                            <img src="assets/img/projects/ziwa-thukha.jpg" alt="" class="portfolio__img" width="1426" height="540">
+                        </button>
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Ziwa Thukha Healthcare</h3>
+                            <p class="portfolio__meta">Healthcare management</p>
+                            <ul class="portfolio__tags">
+                                <li>Laravel</li>
+                                <li>Vue 3</li>
+                                <li>PrimeVue</li>
+                                <li>Tailwind CSS</li>
+                                <li>REST APIs</li>
+                            </ul>
+                            <p class="portfolio__description">Staff portal for a hospital and clinic, with Myanmar language support.</p>
+                            <ul class="portfolio__points">
+                                <li>Patients, doctors, appointments, and check-ups</li>
+                                <li>Laboratory, billing, pharmacy, and warehouse</li>
+                                <li>Marketing proposals, follow-ups, and quotations</li>
+                            </ul>
+                            <div class="portfolio__actions">
+                                <p class="portfolio__note"><i class="uil uil-lock" aria-hidden="true"></i> The live portal needs a login.</p>
+                                <div class="portfolio__buttons">
+                                    <button type="button" class="button button--flex button--small portfolio__open" data-gallery="ziwa">
+                                        View screens
+                                        <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
+                                    </button>
+                                    <a href="https://admin-uat.ziwathukha.com/" target="_blank" rel="noopener" class="portfolio__link">
+                                        Portal
+                                        <i class="uil uil-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-                    <!--==================== PORTFOLIO 1 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/qp.png" alt="" class="portfolio__img">
+                    <article class="portfolio__card">
+                        <button type="button" class="portfolio__banner" data-gallery="heal" aria-label="View Heal by Pun Hlaing screens">
+                            <img src="assets/img/projects/heal-pun-hlaing.jpg" alt="" class="portfolio__img" width="1400" height="838">
+                        </button>
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Heal by Pun Hlaing</h3>
+                            <p class="portfolio__meta">Healthcare management</p>
+                            <ul class="portfolio__tags">
+                                <li>Laravel</li>
+                                <li>Vue 3</li>
+                                <li>PrimeVue</li>
+                                <li>Tailwind CSS</li>
+                                <li>MySQL</li>
+                                <li>REST APIs</li>
+                                <li>Redis</li>
+                            </ul>
+                            <p class="portfolio__description">Healthcare platform for 50,000+ patients.</p>
+                            <ul class="portfolio__points">
+                                <li>Appointments, medical records, and doctor chat</li>
+                                <li>REST APIs with Laravel Passport</li>
+                                <li>Redis queues and HIPAA-compliant practices</li>
+                            </ul>
+                            <div class="portfolio__actions">
+                                <p class="portfolio__note"><i class="uil uil-lock" aria-hidden="true"></i> The live dashboard needs a login.</p>
+                                <div class="portfolio__buttons">
+                                    <button type="button" class="button button--flex button--small portfolio__open" data-gallery="heal">
+                                        View screens
+                                        <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
+                    <article class="portfolio__card">
+                        <button type="button" class="portfolio__banner" data-gallery="star-city" aria-label="View Star City Living screens">
+                            <img src="assets/img/projects/star-city.jpg" alt="" class="portfolio__img" width="1200" height="628">
+                        </button>
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Star City Living</h3>
+                            <p class="portfolio__meta">Estate management</p>
+                            <ul class="portfolio__tags">
+                                <li>Laravel</li>
+                                <li>Vue 3</li>
+                                <li>PrimeVue</li>
+                                <li>PrimeFlex</li>
+                                <li>MySQL</li>
+                                <li>REST APIs</li>
+                                <li>Redis</li>
+                            </ul>
+                            <p class="portfolio__description">Residential platform for 100,000+ residents.</p>
+                            <ul class="portfolio__points">
+                                <li>Resident services and memberships</li>
+                                <li>Maintenance requests</li>
+                                <li>Redis caching and a payment gateway</li>
+                            </ul>
+                            <div class="portfolio__actions">
+                                <p class="portfolio__note"><i class="uil uil-lock" aria-hidden="true"></i> Portal login. Only people with credentials can sign in.</p>
+                                <div class="portfolio__buttons">
+                                    <button type="button" class="button button--flex button--small portfolio__open" data-gallery="star-city">
+                                        View screens
+                                        <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
+                                    </button>
+                                    <a href="https://scla-uat.onenex.dev/login" target="_blank" rel="noopener" class="portfolio__link">
+                                        Portal
+                                        <i class="uil uil-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio__card">
+                        <button type="button" class="portfolio__banner" data-gallery="governors" aria-label="View Governor's Club Yangon screens">
+                            <img src="assets/img/projects/governors-club.jpg" alt="" class="portfolio__img" width="1400" height="932">
+                        </button>
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">The Governor's Club Yangon</h3>
+                            <p class="portfolio__meta">Customer portal and admin dashboard</p>
+                            <ul class="portfolio__tags">
+                                <li>Laravel</li>
+                                <li>Vue 3</li>
+                                <li>Nuxt.js</li>
+                                <li>PrimeVue</li>
+                                <li>PrimeFlex</li>
+                                <li>Strapi</li>
+                                <li>MySQL</li>
+                                <li>REST APIs</li>
+                            </ul>
+                            <p class="portfolio__description">One club platform for members and staff.</p>
+                            <ul class="portfolio__points">
+                                <li>Customer portal for the club's offerings</li>
+                                <li>Admin dashboard for staff, with a login</li>
+                            </ul>
+                            <div class="portfolio__actions">
+                                <div class="portfolio__buttons">
+                                    <button type="button" class="button button--flex button--small portfolio__open" data-gallery="governors">
+                                        View screens
+                                        <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
+                                    </button>
+                                    <a href="https://www.governorsclubyangon.com/#governor-residence" target="_blank" rel="noopener" class="portfolio__link">
+                                        Portal
+                                        <i class="uil uil-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio__card portfolio__card--shot">
+                        <button type="button" class="portfolio__banner" data-gallery="quiet-place" aria-label="View Quiet Place screens">
+                            <img src="assets/img/qp.png" alt="" class="portfolio__img" width="830" height="601">
+                        </button>
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Quiet Place</h3>
-                            <p class="portfolio__description">Laravel group project in php bootcamp.</p>
-                            <a href="https://github.com/PyayNyiThu/quiet_place" target="_blank" class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
+                            <p class="portfolio__meta">Bootcamp group project</p>
+                            <ul class="portfolio__tags">
+                                <li>Laravel</li>
+                            </ul>
+                            <p class="portfolio__description">Room search from the PHP Web Developer Bootcamp.</p>
+                            <ul class="portfolio__points">
+                                <li>Meeting rooms and classrooms</li>
+                                <li>Township, size, capacity, and price</li>
+                            </ul>
+                            <div class="portfolio__actions">
+                                <div class="portfolio__buttons">
+                                    <button type="button" class="button button--flex button--small portfolio__open" data-gallery="quiet-place">
+                                        View screens
+                                        <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
+                                    </button>
+                                    <a href="https://github.com/PyayNyiThu/quiet_place" target="_blank" rel="noopener" class="portfolio__link">
+                                        Code
+                                        <i class="uil uil-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-                            <!-- <span class="button button--flex button--small button--link services__button">
-                                View More
-                                <i class="uil uil-arrow-circle-right button__icon"></i>
-                            </span> -->
-
-
-                            <!-- <div class="portfolio__modal">
-                                <div class="services__modal-content">
-                                    <h4 class="services__modal-title">Ui/Ux <br> Designer</h4>
-                                    <i class="uil uil-times portfolio__modal-close"></i>
-        
-                                    <ul class="services__modal-services grid">
-                                        <li class="services__modal-service">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I develop the user interface.</p>
-                                        </li>
-        
-                                        <li class="services__modal-service">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>Web page development.</p>
-                                        </li>
-        
-                                        <li class="services__modal-service">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I create ux element interactions.</p>
-                                        </li>
-        
-                                        <li class="services__modal-service">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I position your company brand.</p>
-                                        </li>
+                    <article class="portfolio__card portfolio__card--note">
+                        <div class="portfolio__banner portfolio__banner--still">
+                            <img src="assets/img/projects/other-projects.jpg?v=2" alt="Sample screen for HR and ERP" class="portfolio__img" width="1280" height="720">
+                        </div>
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Other projects</h3>
+                            <p class="portfolio__meta">HR and ERP</p>
+                            <p class="portfolio__description">Management systems I built. This screen is a sample layout.</p>
+                            <div class="portfolio__groups">
+                                <div class="portfolio__group">
+                                    <h4 class="portfolio__group-title">HR management</h4>
+                                    <ul class="portfolio__points">
+                                        <li>Employee records and departments</li>
+                                        <li>Attendance and leave</li>
+                                        <li>Staff roles</li>
+                                        <li>Shift schedules</li>
+                                        <li>Basic payroll records</li>
                                     </ul>
                                 </div>
-                            </div> -->
+                                <div class="portfolio__group">
+                                    <h4 class="portfolio__group-title">ERP management</h4>
+                                    <ul class="portfolio__points">
+                                        <li>REST APIs for the ERP system</li>
+                                        <li>Day-to-day operations</li>
+                                        <li>Inventory and purchasing</li>
+                                        <li>Approvals across departments</li>
+                                        <li>Reports for the team</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <!--==================== PORTFOLIO 2 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/astroliquor.JPG" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Astro Liquor Store</h3>
-                            <p class="portfolio__description">Bootstrap group project in php bootcamp.</p>
-                            <a href="assets/portfolio/Liquor-project/index.html" target="_blank" class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    
-
-                    <!--==================== PORTFOLIO 3 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/password-generator.PNG" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Password Generator</h3>
-                            <p class="portfolio__description">Password generator writing by html & javascript.</p>
-                            <a href="assets/portfolio/password-generator/index.html" target="_blank" class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--==================== PORTFOLIO 4 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/blog.PNG" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Blog</h3>
-                            <p class="portfolio__description">This blog project writing by php.</p>
-                            <a href="https://github.com/PyayNyiThu/blog" target="_blank" class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
+                    </article>
                 </div>
-
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
-
         </section>
 
         <!--==================== PROJECT IN MIND ====================-->
         <section class="project section">
             <div class="project__bg">
-                <div class="project__container container gird">
+                <div class="project__container container grid">
                     <div class="project__data">
-                        <h2 class="project__title">You have a new project</h2>
-                        <p class="project__description">Contact me now on your new project.</p>
+                        <h2 class="project__title">Have a product to build?</h2>
+                        <p class="project__description">I take features from the database and API through the interface.</p>
                         <a href="#contact" class="button button--flex button--white">
                             Contact
                             <i class="uil uil-message project__icon button__icon"></i>
                         </a>
                     </div>
                     
-                    <img src="assets/img/project.png" alt="" class="project__img">
+                    <img src="assets/img/project.png" alt="Pyay Nyi Thu" class="project__img">
                 </div>
             </div>
 
         </section>
 
-        <!--==================== TESTIMONIAL ====================-->
-        <!-- <section class="testimonial section">
-            <h2 class="section__title">Testimonial</h2>
-            <span class="section__subtitle">My client saying</span>
-
-            <div class="testimonial__container container swiper">
-                <div class="swiper-wrapper"> -->
-                    <!--==================== TESTIMONIAL 1 ====================-->
-                    <!-- <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__img">
-
-                                <div>
-                                    <h3 class="testimonial__name">Sara Smith</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day.</p>
-                    </div> -->
-
-                    <!--==================== TESTIMONIAL 2 ====================-->
-                    <!-- <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">
-
-                                <div>
-                                    <h3 class="testimonial__name">Matt Robinson</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day.</p>
-                    </div> -->
-
-                    <!--==================== TESTIMONIAL 3 ====================-->
-                    <!-- <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="assets/img/testimonial3.jpg" alt="" class="testimonial__img">
-
-                                <div>
-                                    <h3 class="testimonial__name">Raul Harris</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                                <i class="uil uil-star testimonial__cion-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day.</p>
-                    </div>
-                </div> -->
-
-                <!-- Add Pagination -->
-                <!-- <div class="swiper-pagination swiper-pagination-testimonial"></div>
-            </div>
-
-        </section> -->
-
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contact</h2>
-            <span class="section__subtitle">Get in touch</span>
+            <span class="section__subtitle">Bangkok, Thailand</span>
 
             <div class="contact__container container grid">
                 <div>
@@ -941,7 +666,7 @@
 
                         <div>
                             <h3 class="contact__title">Call Me</h3>
-                            <span class="contact__subtitle">(+95) 9254825394</span>
+                            <a href="tel:+66928560644" class="contact__subtitle">+66 928 560 644</a>
                         </div>
                     </div>
 
@@ -950,7 +675,7 @@
 
                         <div>
                             <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">pyaenyithu3487@gmail.com</span>
+                            <a href="mailto:pyaynyithu@gmail.com" class="contact__subtitle">pyaynyithu@gmail.com</a>
                         </div>
                     </div>
 
@@ -959,39 +684,41 @@
 
                         <div>
                             <h3 class="contact__title">Location</h3>
-                            <span class="contact__subtitle">Yangon, Myanmar.</span>
+                            <span class="contact__subtitle">Bangkok, Thailand.</span>
                         </div>
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form id="contact-form" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                            <label for="contact-name" class="contact__label">Name</label>
+                            <input type="text" id="contact-name" name="name" class="contact__input" required>
                         </div>
 
                         <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
+                            <label for="contact-email" class="contact__label">Email</label>
+                            <input type="email" id="contact-email" name="email" class="contact__input" required>
                         </div>
                     </div>
 
                     <div class="contact__content">
-                        <label for="" class="contact__label">Project</label>
-                        <input type="text" class="contact__input">
+                        <label for="contact-project" class="contact__label">Project</label>
+                        <input type="text" id="contact-project" name="project" class="contact__input">
                     </div>
 
                     <div class="contact__content">
-                        <label for="" class="contact__label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <label for="contact-message" class="contact__label">Message</label>
+                        <textarea id="contact-message" name="message" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
-                            Message
+                        <input type="text" name="_honey" class="contact__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <button type="submit" class="button button--flex">
+                            Send
                             <i class="uil uil-message button__icon"></i>
-                        </a>
+                        </button>
+                        <p id="contact-status" class="contact__note" role="status" aria-live="polite">Enter your own email. The message goes to pyaynyithu@gmail.com.</p>
                     </div>
                 </form>
             </div>
@@ -1004,7 +731,7 @@
             <div class="footer__container container grid">
                 <div>
                     <h1 class="footer__title">Pyay Nyi Thu</h1>
-                    <span class="footer__subtitle">Web Developer</span>
+                    <span class="footer__subtitle">Full Stack Software Engineer</span>
                 </div>
 
                 <ul class="footer__links">
@@ -1022,7 +749,7 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href="https://facebook.com/pyaenyi.thu" target="_blank" class="footer__social">
+                    <a href="https://www.facebook.com/pyaynyithu" target="_blank" class="footer__social">
                         <i class="uil uil-facebook-f"></i>
                     </a>
 
@@ -1030,13 +757,13 @@
                         <i class="uil uil-linkedin-alt"></i>
                     </a>
 
-                    <a href="https://github.com/PyayNyiThu" target="_blank" class="footer__social">
-                        <i class="uil uil-github-alt"></i>
+                    <a href="https://github.com/PyayNyiThu" target="_blank" rel="noopener" class="footer__social" aria-label="GitHub">
+                        <i class="uil uil-github"></i>
                     </a>
                 </div>
             </div>
 
-            <p class="footer__copy">Copyright &#169; 2021 Bedimcode. All right reserved.</p>
+            <p class="footer__copy">Copyright &#169; 2026 Pyay Nyi Thu. All rights reserved.</p>
         </div>
 
     </footer>
@@ -1046,18 +773,30 @@
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <!--==================== PROJECT SCREENS ====================-->
+    <div class="gallery" id="project-gallery" hidden>
+        <div class="gallery__backdrop" data-gallery-close></div>
+        <div class="gallery__dialog" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+            <button type="button" class="gallery__close" data-gallery-close aria-label="Close">
+                <i class="uil uil-times" aria-hidden="true"></i>
+            </button>
+            <p class="gallery__title" id="gallery-title"></p>
+            <div class="gallery__stage">
+                <button type="button" class="gallery__nav gallery__nav--prev" data-gallery-prev aria-label="Previous screen">
+                    <i class="uil uil-angle-left" aria-hidden="true"></i>
+                </button>
+                <img class="gallery__img" id="gallery-image" alt="">
+                <button type="button" class="gallery__nav gallery__nav--next" data-gallery-next aria-label="Next screen">
+                    <i class="uil uil-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <p class="gallery__caption" id="gallery-caption"></p>
+            <div class="gallery__dots" id="gallery-dots"></div>
+        </div>
+    </div>
 
     <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js"></script>
-
-    <!--==================== Type Writer JS ====================-->
-    <script src="assets/js/TypeWriter.js"></script>
-
-    <!--==================== Type Writer Text JS ====================-->
-    <script src="assets/js/TypeWriterText.js"></script>
+    <script src="assets/js/main.js?v=16"></script>
 </body>
 
 </html>

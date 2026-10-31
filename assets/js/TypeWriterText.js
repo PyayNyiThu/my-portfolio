@@ -10,7 +10,7 @@ new TypeWriter(`#typewriter`, {
   .write(`Pyay Nyi Thu`)
   .wait(2000)
   .removeAll()
-  .write(`Web Developer`)
+  .write(`Full Stack Developer`)
   .wait(2000)
   .remove(6)
   .removeAll()
