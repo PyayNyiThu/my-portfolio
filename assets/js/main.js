@@ -298,9 +298,11 @@ const projectGalleries = {
     governors: {
         title: "Governor's Club Yangon",
         slides: [
-            { src: 'assets/img/projects/governors-1.jpg', caption: 'Customer portal. Placeholder until your screenshot is added.' },
-            { src: 'assets/img/projects/governors-2.jpg', caption: 'Club offerings. Placeholder until your screenshot is added.' },
-            { src: 'assets/img/projects/governors-3.jpg', caption: 'Admin dashboard. Placeholder until your screenshot is added.' },
+            { src: 'assets/img/projects/governors-1.png', caption: "Governor's Residence." },
+            { src: 'assets/img/projects/governors-2.png', caption: 'Member wallet.' },
+            { src: 'assets/img/projects/governors-3.png', caption: 'Active memberships.' },
+            { src: 'assets/img/projects/governors-4.png', caption: 'Membership detail.' },
+            { src: 'assets/img/projects/governors-5.png', caption: 'Roles and permissions.' },
         ],
     },
     'quiet-place': {
@@ -319,11 +321,12 @@ if (projectGallery) {
     const galleryCaption = document.getElementById('gallery-caption')
     const galleryImage = document.getElementById('gallery-image')
     const galleryDots = document.getElementById('gallery-dots')
+    const galleryDetails = document.getElementById('gallery-details')
     let galleryKey = null
     let galleryIndex = 0
     let galleryOpener = null
 
-    const galleryButtons = () => [...galleryDialog.querySelectorAll('button')]
+    const galleryButtons = () => [...galleryDialog.querySelectorAll('button, a[href]')].filter((item) => item.offsetParent !== null)
 
     const renderGallery = () => {
         const project = projectGalleries[galleryKey]
@@ -338,6 +341,17 @@ if (projectGallery) {
             if (active) dot.setAttribute('aria-current', 'true')
             else dot.removeAttribute('aria-current')
         })
+        galleryDialog.classList.toggle('gallery__dialog--single', project.slides.length < 2)
+    }
+
+    const fillGalleryDetails = (button) => {
+        const data = button.closest('.portfolio__card')?.querySelector('.portfolio__data')
+        galleryDetails.textContent = ''
+        if (!data) return
+        const copy = data.cloneNode(true)
+        copy.querySelector('.portfolio__title')?.remove()
+        copy.querySelectorAll('.portfolio__open').forEach((control) => control.remove())
+        galleryDetails.appendChild(copy)
     }
 
     const openGallery = (key, button) => {
@@ -345,6 +359,7 @@ if (projectGallery) {
         galleryIndex = 0
         galleryOpener = button
         galleryDots.textContent = ''
+        fillGalleryDetails(button)
         projectGalleries[key].slides.forEach((slide, slideIndex) => {
             const dot = document.createElement('button')
             dot.type = 'button'
@@ -366,6 +381,8 @@ if (projectGallery) {
         projectGallery.hidden = true
         document.body.style.overflow = ''
         galleryImage.removeAttribute('src')
+        galleryDetails.textContent = ''
+        galleryDialog.classList.remove('gallery__dialog--single')
         if (galleryOpener) galleryOpener.focus()
     }
 

@@ -88,6 +88,8 @@
 
         .job, .project {
             margin: 0 0 10px;
+            break-inside: avoid;
+            page-break-inside: avoid;
         }
 
         .job-head, .project-head {
@@ -171,7 +173,7 @@
 
         <h2>Skills</h2>
         <ul class="skills">
-            <li><strong>Backend:</strong> PHP, Laravel, Node.js, REST APIs, MySQL, Redis</li>
+            <li><strong>Backend:</strong> PHP, Laravel, Node.js, Strapi, REST APIs, MySQL</li>
             <li><strong>Frontend:</strong> JavaScript, Vue 3, Nuxt.js, PrimeVue, Tailwind CSS, HTML, CSS</li>
             <li><strong>Practice:</strong> Git, code review, database design, working with PM, BA, UI/UX, and QA</li>
             <li><strong>Languages:</strong> Burmese (native), English (intermediate)</li>
@@ -180,7 +182,7 @@
         <h2>Experience</h2>
         <article class="job">
             <div class="job-head">
-                <h3>Senior Software Engineer <span class="where">· Atlas Digi Myanmar Limited (Onenex)</span></h3>
+                <h3>Senior Software Engineer <span class="where">· Yoma Strategic Holdings Ltd (Onenex)</span></h3>
                 <span class="when">2022 Sept – 2026 July</span>
             </div>
             <ul>
@@ -212,17 +214,29 @@
 
         <h2>Selected projects</h2>
         <article class="project">
-            <h3>Healthcare Management Systems <span class="where">· Heal by Pun Hlaing and Ziwa Thukha</span></h3>
+            <h3>Ziwa Thukha Healthcare <span class="where">· Administration portal</span></h3>
+            <p class="stack">Vue 3, Pinia, PrimeVue, Tailwind CSS, CASL, Vue I18n, Laravel REST API</p>
             <ul>
-                <li>Built healthcare applications covering patient management, appointments, medical records, pharmacy, laboratory, and hospital administration, including a platform for 50,000+ patients.</li>
-                <li>Developed Laravel and Vue 3 interfaces, REST API integrations, and authentication with Laravel Passport, with a strong emphasis on data security and HIPAA-compliant practices.</li>
+                <li>Developed a Vue 3 portal for patient registration, visit check-in, appointments, and the live clinic queue, with each doctor limited to their own queue, history, and check-up results.</li>
+                <li>Built billing, laboratory registration, pharmacy, and warehouse flows, including stock transfers and order requests.</li>
+                <li>Delivered proposal and quotation workflows for corporate clients, from draft and approval through revision and a printable quotation, in English and Myanmar.</li>
             </ul>
         </article>
         <article class="project">
-            <h3>Estate Management Platform <span class="where">· Star City Living</span></h3>
+            <h3>Heal by Pun Hlaing <span class="where">· Healthcare platform</span></h3>
+            <p class="stack">Laravel, Vue 3, PrimeVue, Tailwind CSS, MySQL, Redis, Laravel Passport</p>
             <ul>
-                <li>Developed and maintained a residential management platform for 100,000+ residents.</li>
-                <li>Built Laravel REST APIs and Vue 3 dashboards for resident services, memberships, and maintenance requests, with Redis caching and a payment gateway.</li>
+                <li>Built a healthcare platform for 50,000+ patients, covering appointments, medical records, and doctor chat.</li>
+                <li>Developed Vue 3 interfaces and REST APIs with Laravel Passport, using Redis queues.</li>
+            </ul>
+        </article>
+        <article class="project">
+            <h3>Star City Living App <span class="where">· Admin portal</span></h3>
+            <p class="stack">Vue 3, Pinia, PrimeVue, CASL, Vue I18n, Axios</p>
+            <ul>
+                <li>Developed a Vue 3 admin portal for 80,000+ residents, covering pending, active, inactive, and rejected profiles, with unit assignment, rejection remarks, and bill history.</li>
+                <li>Built service-case workflows and the sports-club module for subscriptions, prepaid packages, and facility bookings across courts and time slots.</li>
+                <li>Delivered English and Myanmar content for the resident app, including draft and published pages, FAQ, terms, and payment-channel settings, with role-based access.</li>
             </ul>
         </article>
         <p class="more">More projects and technical details: <a href="https://pyaynyithu.github.io/my-portfolio/">View my portfolio</a></p>

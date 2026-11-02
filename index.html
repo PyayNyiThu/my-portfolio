@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/styles.css?v=30">
+    <link rel="stylesheet" href="assets/css/styles.css?v=36">
 
     <title>Pyay Nyi Thu | Full Stack Software Engineer</title>
 </head>
@@ -173,7 +173,7 @@
                         </div>
 
                         <div>
-                            <span class="about__info-title">100k+</span>
+                            <span class="about__info-title">80k+</span>
                             <span class="about__info-name">Residents on <br> Star City</span>
                         </div>
                     </div>
@@ -353,7 +353,7 @@
                         <div class="qualification__data">
                             <div>
                                 <h3 class="qualification__title">Senior Software Engineer</h3>
-                                <span class="qualification__subtitle">Atlas Digi Myanmar Limited (Onenex)</span>
+                                <span class="qualification__subtitle">Yoma Strategic Holdings Ltd (Onenex)</span>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
                                     2022 Sept – 2026 July
@@ -434,16 +434,28 @@
                             <ul class="portfolio__tags">
                                 <li>Laravel</li>
                                 <li>Vue 3</li>
+                                <li>Pinia</li>
                                 <li>PrimeVue</li>
                                 <li>Tailwind CSS</li>
                                 <li>REST APIs</li>
                             </ul>
-                            <p class="portfolio__description">Staff portal for a hospital and clinic, with Myanmar language support.</p>
+                            <p class="portfolio__description">Administration portal for hospital and clinic staff, in English and Myanmar.</p>
                             <ul class="portfolio__points">
-                                <li>Patients, doctors, appointments, and check-ups</li>
-                                <li>Laboratory, billing, pharmacy, and warehouse</li>
-                                <li>Marketing proposals, follow-ups, and quotations</li>
+                                <li>Patient visits, appointments, doctor queues, and check-ups</li>
+                                <li>Billing, laboratory, pharmacy, and warehouse stock</li>
+                                <li>Role-based access, plus proposals and quotations</li>
                             </ul>
+                            <div class="portfolio__full">
+                                <p>Ziwa Thukha (ZWTK) is a healthcare administration portal for hospital and clinic staff. The Vue 3 application is backed by a Laravel REST API and covers front-desk check-in, appointments, doctor queues, medical check-ups, billing, laboratory work, pharmacy, and warehouse stock. It also includes company registration and a marketing flow for proposals, follow-ups, and quotations, with finance approval before a quotation is finalized. Role-based permissions keep each area limited to the right staff, and the interface is available in English and Myanmar.</p>
+                                <ul class="portfolio__points">
+                                    <li>Patient registration, visit check-in, appointments, and the live clinic queue</li>
+                                    <li>Doctor workspace for assigned queues, patient history, and check-up results, limited to the signed-in doctor</li>
+                                    <li>Billing, laboratory registration, pharmacy, and warehouse flows, including stock transfers and order requests</li>
+                                    <li>Proposal and quotation workflows, from draft and approval through revision and a printable quotation</li>
+                                    <li>Laravel REST API with CASL permission checks, form validation, and English and Myanmar</li>
+                                </ul>
+                                <p class="portfolio__stack">Vue 3, Vite, Pinia, Vue Router, PrimeVue, Tailwind CSS, Axios, CASL, Vue I18n, and a Laravel REST API.</p>
+                            </div>
                             <div class="portfolio__actions">
                                 <p class="portfolio__note"><i class="uil uil-lock" aria-hidden="true"></i> The live portal needs a login.</p>
                                 <div class="portfolio__buttons">
@@ -451,10 +463,10 @@
                                         View screens
                                         <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
                                     </button>
-                                    <a href="https://admin-uat.ziwathukha.com/" target="_blank" rel="noopener" class="portfolio__link">
+                                    <!-- <a href="https://admin-uat.ziwathukha.com/" target="_blank" rel="noopener" class="portfolio__link">
                                         Portal
                                         <i class="uil uil-external-link-alt" aria-hidden="true"></i>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
@@ -478,10 +490,20 @@
                             </ul>
                             <p class="portfolio__description">Healthcare platform for 50,000+ patients.</p>
                             <ul class="portfolio__points">
-                                <li>Appointments, medical records, and doctor chat</li>
-                                <li>REST APIs with Laravel Passport</li>
-                                <li>Redis queues and HIPAA-compliant practices</li>
+                                <li>On-demand appointments, medical records, and doctor chat</li>
+                                <li>Find doctors, online and in person</li>
+                                <li>REST APIs with Laravel Passport and Redis queues</li>
                             </ul>
+                            <div class="portfolio__full">
+                                <p>Heal by Pun Hlaing is a healthcare platform for 50,000+ patients. The Vue 3 application is backed by a Laravel REST API and covers on-demand appointments, medical records, and doctor chat. Patients can search for a doctor, online or in person, open a patient profile, and book a time slot with a reason for the visit. The API uses Laravel Passport, and Redis handles background queues.</p>
+                                <ul class="portfolio__points">
+                                    <li>On-demand appointments with a time slot and a reason for the visit</li>
+                                    <li>Doctor search for online and in-person visits, plus doctor chat</li>
+                                    <li>Medical records and a patient profile</li>
+                                    <li>Laravel REST API with Laravel Passport and Redis queues</li>
+                                </ul>
+                                <p class="portfolio__stack">Laravel, Vue 3, PrimeVue, Tailwind CSS, MySQL, Redis, and Laravel Passport.</p>
+                            </div>
                             <div class="portfolio__actions">
                                 <p class="portfolio__note"><i class="uil uil-lock" aria-hidden="true"></i> The live dashboard needs a login.</p>
                                 <div class="portfolio__buttons">
@@ -500,22 +522,33 @@
                         </button>
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Star City Living</h3>
-                            <p class="portfolio__meta">Estate management</p>
+                            <p class="portfolio__meta">Admin portal</p>
                             <ul class="portfolio__tags">
                                 <li>Laravel</li>
                                 <li>Vue 3</li>
+                                <li>Pinia</li>
                                 <li>PrimeVue</li>
-                                <li>PrimeFlex</li>
-                                <li>MySQL</li>
+                                <li>CASL</li>
                                 <li>REST APIs</li>
                                 <li>Redis</li>
                             </ul>
-                            <p class="portfolio__description">Residential platform for 100,000+ residents.</p>
+                            <p class="portfolio__description">Admin portal for 80,000+ residents, in English and Myanmar.</p>
                             <ul class="portfolio__points">
-                                <li>Resident services and memberships</li>
-                                <li>Maintenance requests</li>
-                                <li>Redis caching and a payment gateway</li>
+                                <li>Resident profiles, units, and bill history</li>
+                                <li>Service cases, sports-club membership, and facility bookings</li>
+                                <li>Content for the resident app, with role-based access</li>
                             </ul>
+                            <div class="portfolio__full">
+                                <p>Star City Living is an operations portal for staff at a residential community of 80,000+ residents. The Vue 3 application covers resident onboarding, service cases, sports-club membership, facility bookings, and the content published to the resident mobile app. Role-based permissions keep each module limited to the right team, and the interface is available in English and Myanmar.</p>
+                                <ul class="portfolio__points">
+                                    <li>Resident profiles from pending and active through inactive and rejected, with unit assignment, rejection remarks, and bill history</li>
+                                    <li>Service cases with categories, assignment, status changes, working-day and holiday settings, and export</li>
+                                    <li>Sports-club subscriptions, prepaid packages, and member status, plus facility bookings for courts and time slots</li>
+                                    <li>Content for the resident app, from draft to published, including FAQ, terms, app-version control, device notifications, and payment-channel settings</li>
+                                    <li>CASL permission checks, English and Myanmar, and sign-in with token-based password setup</li>
+                                </ul>
+                                <p class="portfolio__stack">Vue 3, Pinia, Vue Router, PrimeVue, Axios, CASL, Vue I18n, Vuelidate, Chart.js, FullCalendar, Quill, and Sass.</p>
+                            </div>
                             <div class="portfolio__actions">
                                 <p class="portfolio__note"><i class="uil uil-lock" aria-hidden="true"></i> Portal login. Only people with credentials can sign in.</p>
                                 <div class="portfolio__buttons">
@@ -523,10 +556,10 @@
                                         View screens
                                         <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
                                     </button>
-                                    <a href="https://scla-uat.onenex.dev/login" target="_blank" rel="noopener" class="portfolio__link">
+                                    <!-- <a href="https://scla-uat.onenex.dev/login" target="_blank" rel="noopener" class="portfolio__link">
                                         Portal
                                         <i class="uil uil-external-link-alt" aria-hidden="true"></i>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
@@ -549,21 +582,32 @@
                                 <li>MySQL</li>
                                 <li>REST APIs</li>
                             </ul>
-                            <p class="portfolio__description">One club platform for members and staff.</p>
+                            <p class="portfolio__description">Member portal and staff dashboard for the club.</p>
                             <ul class="portfolio__points">
-                                <li>Customer portal for the club's offerings</li>
-                                <li>Admin dashboard for staff, with a login</li>
+                                <li>Governor's Residence, membership application, and contact</li>
+                                <li>Member wallet, top up, and membership history</li>
+                                <li>Admin for memberships, wallets, and club content</li>
                             </ul>
+                            <div class="portfolio__full">
+                                <p>The Governor's Club Yangon is a member platform with a public customer portal and a staff dashboard. The Nuxt.js portal presents Governor's Residence, a membership application, contact details, and member login. Signed-in members can see a wallet balance, top up, and review wallet and membership history. Staff use the admin dashboard to manage pending, active, and inactive memberships, extend a membership, and update the club content published on the portal.</p>
+                                <ul class="portfolio__points">
+                                    <li>Public pages for Governor's Residence, membership application, and contact</li>
+                                    <li>Member wallet with balance, top up, and wallet and membership history</li>
+                                    <li>Membership records for pending, active, and inactive members, including an extension</li>
+                                    <li>Club content for the public portal, managed from the admin dashboard</li>
+                                </ul>
+                                <p class="portfolio__stack">Laravel, Vue 3, Nuxt.js, PrimeVue, PrimeFlex, Strapi, MySQL, and REST APIs.</p>
+                            </div>
                             <div class="portfolio__actions">
                                 <div class="portfolio__buttons">
                                     <button type="button" class="button button--flex button--small portfolio__open" data-gallery="governors">
                                         View screens
                                         <i class="uil uil-arrow-right button__icon" aria-hidden="true"></i>
                                     </button>
-                                    <a href="https://www.governorsclubyangon.com/#governor-residence" target="_blank" rel="noopener" class="portfolio__link">
+                                    <!-- <a href="https://www.governorsclubyangon.com/#governor-residence" target="_blank" rel="noopener" class="portfolio__link">
                                         Portal
                                         <i class="uil uil-external-link-alt" aria-hidden="true"></i>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
@@ -648,7 +692,11 @@
                         </a>
                     </div>
                     
-                    <img src="assets/img/project.png" alt="Pyay Nyi Thu" class="project__img">
+                    <div class="project__mark" aria-hidden="true">
+                        <span class="project__tile"><i class="uil uil-database"></i></span>
+                        <span class="project__tile project__tile--main"><i class="uil uil-brackets-curly"></i></span>
+                        <span class="project__tile"><i class="uil uil-window"></i></span>
+                    </div>
                 </div>
             </div>
 
@@ -781,22 +829,30 @@
                 <i class="uil uil-times" aria-hidden="true"></i>
             </button>
             <p class="gallery__title" id="gallery-title"></p>
-            <div class="gallery__stage">
-                <button type="button" class="gallery__nav gallery__nav--prev" data-gallery-prev aria-label="Previous screen">
-                    <i class="uil uil-angle-left" aria-hidden="true"></i>
-                </button>
-                <img class="gallery__img" id="gallery-image" alt="">
-                <button type="button" class="gallery__nav gallery__nav--next" data-gallery-next aria-label="Next screen">
-                    <i class="uil uil-angle-right" aria-hidden="true"></i>
-                </button>
+            <div class="gallery__layout">
+                <div class="gallery__media">
+                    <div class="gallery__stage">
+                        <button type="button" class="gallery__nav gallery__nav--prev" data-gallery-prev aria-label="Previous screen">
+                            <i class="uil uil-angle-left" aria-hidden="true"></i>
+                        </button>
+                        <img class="gallery__img" id="gallery-image" alt="">
+                        <button type="button" class="gallery__nav gallery__nav--next" data-gallery-next aria-label="Next screen">
+                            <i class="uil uil-angle-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <p class="gallery__caption" id="gallery-caption"></p>
+                    <div class="gallery__dots" id="gallery-dots"></div>
+                </div>
+                <div class="gallery__details">
+                    <h3 class="gallery__details-title">Project description</h3>
+                    <div id="gallery-details"></div>
+                </div>
             </div>
-            <p class="gallery__caption" id="gallery-caption"></p>
-            <div class="gallery__dots" id="gallery-dots"></div>
         </div>
     </div>
 
     <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js?v=16"></script>
+    <script src="assets/js/main.js?v=18"></script>
 </body>
 
 </html>
